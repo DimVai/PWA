@@ -1,0 +1,7 @@
+.center-contents{
+	display: grid;
+	place-items: center;
+}
+.sm{
+	max-width: 756px;
+}
