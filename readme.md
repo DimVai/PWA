@@ -1,7 +1,7 @@
 PWA with code as minimal as possible, as regards manifest & service worker, but with jQuery & Bootstrap & custom CSS.
 You can just follow the instructions, copy the files, not change anything and you will have a PWA! 
 
-https://dimvai.github.io/PWA/
+https://dimvai.github.io/PWA/public
 
 What to do specifically, in order:
 
