@@ -1,0 +1,18 @@
+{
+    "name": "PWA",
+    "short_name": "PWA",
+    "start_url": "index.html",
+    "scope": ".", 
+    "display": "standalone",    
+    "background_color": "blue",
+    "theme_color": "#3F48CC",
+    "description": "Simplest WPA possible",
+    "orientation": "portrait", 
+    "lang": "en-US",
+    "icons": [{
+        "src": "/pwa/logo.png",
+        "type": "image/png",
+        "sizes": "192x192",
+        "purpose": "any"
+    }]
+}
