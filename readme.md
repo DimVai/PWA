@@ -3,11 +3,12 @@ You can just follow the instructions, copy the files, not change anything and yo
 
 What to do specifically, in order:
 
-1. Set your app's icon file, `logo.png`, along with your `favicon.ico`, as an 192x192 png image
-2. Add the `manifest.json` (change the properties appropriately)
-3. Add the `pwa.js` and the `service-worker.js` files (optionally change their content, but you don't have to)
-4. In your `index.html` add the references to the above things. In the `head` section set:
+1. Set your app's icon file, `logo.png` of size 512x512. Also include your `favicon.ico`. 
+2. Add the `manifest.json` (change the properties appropriately).
+3. Add the `pwa.js` and the `service-worker.js` files (optionally change their content, but you don't have to).
+4. In your `index.html` add the references to the above things. In the `head` section set (change the colors/paths):
 ```HTML
+<meta name="theme-color" content="#3f48cc">
 <link rel="icon" href="favicon.ico" type="image/x-icon"/>
 <link rel="manifest" href="manifest.json">      
 

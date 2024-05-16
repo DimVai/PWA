@@ -9,9 +9,15 @@
     "description": "Simplest WPA possible",
     "orientation": "portrait", 
     "lang": "en-US",
-    "icons": [{
-        "src": "/pwa/logo.png",
-        "type": "image/png",
-        "sizes": "192x192"
-    }]
+    "icons": [
+        {
+            "src": "/pwa/logo-192.png",
+            "type": "image/png",
+            "sizes": "192x192"
+        },{
+            "src": "/pwa/logo-512.png",
+            "type": "image/png",
+            "sizes": "512x512"
+        }
+        ]
 }
