@@ -10,6 +10,7 @@ You can just follow the instructions, copy the files, not change anything and yo
 ```HTML
 <meta name="theme-color" content="#3f48cc">
 <link rel="icon" href="favicon.ico" type="image/x-icon"/>
+
 <link rel="manifest" href="manifest.json">      
 
 <script defer src="pwa.js"> </script>
