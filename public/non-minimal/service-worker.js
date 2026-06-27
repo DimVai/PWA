@@ -19,6 +19,7 @@ self.addEventListener('install', event => { self.skipWaiting() });
 // notify when the new updated service worker (this file) gets activated
 self.addEventListener('activate', event => { 
     // event.waitUntil( /* caching and other things to do before it is being installed */ );
+    // event.waitUntil(self.clients.claim());   // // apply the new service worker to all clients (tabs) immediately
     console.debug('service worker activated', event);
 });
 

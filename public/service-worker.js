@@ -11,10 +11,13 @@ self.importScripts('https://storage.googleapis.com/workbox-cdn/releases/6.2.0/wo
 workbox.setConfig({ debug: false });   
 
 // skipWaiting: activate the new version of service worker now, instead of waiting for the next session to do so
-self.addEventListener('install', event => { self.skipWaiting() });
+self.addEventListener('install', event => {
+    event.waitUntil(self.skipWaiting());
+});
 
-// notify when the new updated service worker (this file) gets activated
+// apply the new service worker to all clients (tabs) immediately
 self.addEventListener('activate', event => { 
+    event.waitUntil(self.clients.claim());
     console.debug('service worker activated', event);
 });
 
