@@ -10,16 +10,18 @@ self.importScripts('https://storage.googleapis.com/workbox-cdn/releases/6.2.0/wo
 // disable console logs
 workbox.setConfig({ debug: false });   
 
-// You must delete the following line if you are using lazy-loading of versioned, pre-cached assets
+// You must delete the following command if you are using lazy-loading of versioned, pre-cached assets
 // or have other problems when updating the service worker. 
 // Else, it is recommended to do skipWaiting.
 // (skipWaiting: activate the new version of service worker now, instead of waiting for the next session to do so)
-self.addEventListener('install', event => { self.skipWaiting() });
+self.addEventListener('install', event => {
+    event.waitUntil(self.skipWaiting());
+});
 
-// notify when the new updated service worker (this file) gets activated
+// apply the new service worker to all clients (tabs) immediately
 self.addEventListener('activate', event => { 
     // event.waitUntil( /* caching and other things to do before it is being installed */ );
-    // event.waitUntil(self.clients.claim());   // // apply the new service worker to all clients (tabs) immediately
+    event.waitUntil(self.clients.claim());
     console.debug('service worker activated', event);
 });
 
@@ -29,7 +31,15 @@ self.addEventListener('activate', event => {
 
 // precache things
 // use an array of relative URLs to prefetch, so other pages/operations can be viewed/done offline
-workbox.precaching.precacheAndRoute([], 'GET');
+// Example:
+// workbox.precaching.precacheAndRoute([
+//     { url: '/', revision: '1' },
+//     { url: '/index.html', revision: '1' },
+//     { url: '/style.css', revision: '1' },
+//     { url: '/script.js', revision: '1' },
+//     { url: '/images/logo.png', revision: null }
+// ]);
+workbox.precaching.precacheAndRoute([]);
 
 
 
